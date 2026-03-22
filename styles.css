@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
-  --bg: #fff3f3;
-  --bg-soft: #ffe7e7;
+  --bg: #eef4ff;
+  --bg-soft: #dbe8ff;
   --bg-card: #ffffff;
-  --primary: #e63b2e;
-  --primary-dark: #9f1b14;
-  --accent: #ff8a7a;
+  --primary: #1b3a6f;
+  --primary-dark: #0c1f3f;
+  --accent: #5ea3ff;
   --ink: #0b1b33;
-  --muted: #7a4a4a;
-  --border: rgba(159, 27, 20, 0.12);
-  --shadow: 0 20px 60px rgba(76, 12, 8, 0.12);
+  --muted: #4a5f7a;
+  --border: rgba(12, 31, 63, 0.12);
+  --shadow: 0 20px 60px rgba(12, 31, 63, 0.14);
 }
 
 * {
@@ -20,7 +20,7 @@ body {
   margin: 0;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at top, #ffeaea 0%, #fff6f6 40%, #ffffff 100%);
+  background: radial-gradient(circle at top, #eaf2ff 0%, #f7f9ff 40%, #ffffff 100%);
   min-height: 100vh;
 }
 
@@ -37,8 +37,8 @@ a {
 .ambient-grid {
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(transparent 75%, rgba(159, 27, 20, 0.08)),
-    linear-gradient(90deg, transparent 75%, rgba(159, 27, 20, 0.08));
+  background-image: linear-gradient(transparent 75%, rgba(12, 31, 63, 0.08)),
+    linear-gradient(90deg, transparent 75%, rgba(12, 31, 63, 0.08));
   background-size: 80px 80px;
   opacity: 0.4;
   pointer-events: none;
@@ -53,7 +53,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 24px 8vw;
-  background: rgba(255, 250, 250, 0.9);
+  background: rgba(247, 250, 255, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -71,7 +71,7 @@ a {
   height: 36px;
   border-radius: 12px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
-  box-shadow: 0 10px 20px rgba(230, 59, 46, 0.2);
+  box-shadow: 0 10px 20px rgba(27, 58, 111, 0.2);
 }
 
 .site-nav {
@@ -96,7 +96,7 @@ a {
   background: var(--primary);
   color: white;
   font-weight: 600;
-  box-shadow: 0 10px 20px rgba(230, 59, 46, 0.25);
+  box-shadow: 0 10px 20px rgba(27, 58, 111, 0.25);
 }
 
 main {
@@ -160,7 +160,7 @@ main {
 .primary {
   background: var(--primary);
   color: white;
-  box-shadow: 0 14px 30px rgba(230, 59, 46, 0.25);
+  box-shadow: 0 14px 30px rgba(27, 58, 111, 0.25);
 }
 
 .secondary {
@@ -195,7 +195,7 @@ main {
   position: relative;
   padding: 28px;
   border-radius: 24px;
-  background: linear-gradient(160deg, #fff6f6 0%, #ffe7e7 100%);
+  background: linear-gradient(160deg, #f4f8ff 0%, #dfeaff 100%);
   box-shadow: var(--shadow);
   overflow: hidden;
   min-height: 320px;
@@ -212,14 +212,14 @@ main {
 .pill {
   padding: 6px 12px;
   border-radius: 999px;
-  background: rgba(230, 59, 46, 0.12);
+  background: rgba(27, 58, 111, 0.12);
   color: var(--primary-dark);
   font-size: 0.75rem;
   font-weight: 600;
 }
 
 .pill.muted {
-  background: rgba(255, 138, 122, 0.25);
+  background: rgba(94, 163, 255, 0.2);
 }
 
 .card-link {
@@ -233,7 +233,7 @@ main {
   inset: auto -40px -60px auto;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(255, 138, 122, 0.4) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(94, 163, 255, 0.35) 0%, transparent 65%);
 }
 
 .section {
@@ -271,18 +271,126 @@ main {
 }
 
 .feature-card {
-  background: linear-gradient(180deg, #ffffff 0%, #fff1f1 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5ff 100%);
 }
 
-.cta-panel {
+.lesson-wrap {
+  display: grid;
+  gap: 24px;
+}
+
+.lesson-card {
+  padding: 24px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f2f7ff 100%);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 24px rgba(12, 31, 63, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lesson-card h3 {
+  margin: 0;
+  color: var(--primary-dark);
+}
+
+.lesson-header {
+  display: grid;
+  gap: 12px;
+}
+
+.lesson-summary {
+  color: var(--muted);
+  max-width: 640px;
+}
+
+.subtopic {
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(12, 31, 63, 0.08);
+  display: grid;
+  gap: 16px;
+}
+
+.subtopic-title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.subtopic-title h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+.subtopic-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(27, 58, 111, 0.12);
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.subtopic-body {
+  display: grid;
   gap: 20px;
-  padding: 26px;
-  border-radius: 22px;
-  background: linear-gradient(120deg, rgba(230, 59, 46, 0.08), rgba(255, 138, 122, 0.2));
-  border: 1px solid var(--border);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
+  align-items: start;
+}
+
+.subtopic-content {
+  display: grid;
+  gap: 12px;
+}
+
+.media-card {
+  margin: 0;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(12, 31, 63, 0.12);
+  background: #ffffff;
+  box-shadow: 0 12px 22px rgba(12, 31, 63, 0.08);
+  display: grid;
+  gap: 12px;
+}
+
+.media-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.media-card figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.lesson-block {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(12, 31, 63, 0.08);
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.lesson-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .blog-card .meta {
@@ -326,5 +434,9 @@ main {
   .cta-panel {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .subtopic-body {
+    grid-template-columns: 1fr;
   }
 }
