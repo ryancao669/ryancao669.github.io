@@ -28,79 +28,172 @@
     <main class="page-shell">
       <section class="intro page-intro">
         <p class="eyebrow">Cash Quest</p>
-        <h1>Lesson 1: Personal Banking</h1>
+        <h1>Lesson Library</h1>
         <p class="lead">
-          A simple overview of the project and the first lesson on managing
-          money.
+          Open each lesson to see the notes and a quick quiz.
         </p>
       </section>
 
       <section class="content-stack">
-        <article class="content-card">
-          <h2>What this lesson covers</h2>
-          <p>
-            This lesson introduces the basics of personal banking: bank
-            accounts, debit and credit cards, budgeting, and fees and interest.
-          </p>
-        </article>
+        <button class="lesson-card lesson-button" type="button" data-modal="lesson-1">
+          <span class="meta">Lesson 1</span>
+          <h2>Personal Banking</h2>
+          <p>Accounts, cards, budgets, and the basics of fees.</p>
+        </button>
 
-        <article class="content-card">
-          <h2>Bank accounts</h2>
-          <p>
-            A bank account is a safe place to store money. Checking accounts
-            are for everyday spending, while savings accounts are better for
-            money you want to set aside over time.
-          </p>
-          <p>
-            A simple example is using checking for groceries and bills while
-            keeping an emergency fund in savings.
-          </p>
-        </article>
-
-        <article class="content-card">
-          <h2>Debit and credit cards</h2>
-          <p>
-            Debit cards pull money directly from checking. Credit cards let you
-            borrow money and pay it back later, which means they can build
-            credit history but may also charge interest if not paid on time.
-          </p>
-          <p>
-            The main takeaway is to understand how each one works before using
-            it regularly.
-          </p>
-        </article>
-
-        <article class="content-card">
-          <h2>Budgeting</h2>
-          <p>
-            A budget is a plan for how your money comes in and where it goes.
-            It helps you prioritize needs, prepare for emergencies, and save
-            toward bigger goals.
-          </p>
-          <p>
-            One practical first step is to track your spending for a week and
-            group purchases into categories.
-          </p>
-        </article>
-
-        <article class="content-card">
-          <h2>Fees and interest</h2>
-          <p>
-            Fees are charges that can happen when account rules are broken, for
-            example overdraft fees. Interest is money a savings account can earn
-            over time.
-          </p>
-          <p>
-            Reviewing account terms and understanding avoidable fees is one of
-            the easiest ways to build better money habits.
-          </p>
-        </article>
+        <button class="lesson-card lesson-button" type="button" data-modal="lesson-2">
+          <span class="meta">Lesson 2</span>
+          <h2>Employment and Taxes</h2>
+          <p>Job types, take home pay, and how taxes work.</p>
+        </button>
       </section>
+
+      <div class="modal" id="lesson-1" aria-hidden="true" role="dialog">
+        <div class="modal-panel" role="document">
+          <div class="modal-header">
+            <div>
+              <p class="meta">Lesson 1</p>
+              <h2>Personal Banking</h2>
+            </div>
+            <button class="modal-close" type="button" aria-label="Close lesson">Close</button>
+          </div>
+
+          <div class="content-stack lesson-section">
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Bank accounts</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> A bank account lets you store money. You can deposit checks and use a debit card.</p>
+                <p><span class="lesson-label">How does it work</span> Checking is for daily spending. Savings is for money you want to set aside.</p>
+                <p><span class="lesson-label">Example</span> You buy food with checking and keep emergency money in savings.</p>
+                <p><span class="lesson-label">What students need to take away</span> Knowing account types helps you manage money responsibly.</p>
+                <p><span class="lesson-label">Action</span> Choose the account type that fits how you spend and save.</p>
+                <p><span class="lesson-label">Vocabulary</span> Checking account and savings account plus deposit and debit card.</p>
+              </div>
+            </article>
+
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Debit and credit cards</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> A debit or credit card connects to a bank account or a line of credit.</p>
+                <p><span class="lesson-label">How does it work</span> Debit pulls money right away. Credit lets you borrow and pay later.</p>
+                <p><span class="lesson-label">Example</span> You use debit for a snack. You use credit for a bigger buy and pay the bill later.</p>
+                <p><span class="lesson-label">What students need to take away</span> Debit uses money you have. Credit is borrowed money that needs care.</p>
+                <p><span class="lesson-label">Action</span> Decide which card fits your habits and your goals.</p>
+              </div>
+            </article>
+
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Budgeting</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> A budget tracks how much you earn and how much you spend.</p>
+                <p><span class="lesson-label">How does it work</span> Listing income and costs helps you save and plan ahead.</p>
+                <p><span class="lesson-label">What students need to take away</span> A budget puts you in control of your money.</p>
+                <p><span class="lesson-label">Action</span> Track every purchase this week and compare it to your guess.</p>
+              </div>
+            </article>
+
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Fees and interest</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> Banks can charge fees. Banks can also pay interest on savings.</p>
+                <p><span class="lesson-label">How does it work</span> Fees can happen after an overdraft or low balance. Interest grows savings.</p>
+                <p><span class="lesson-label">What students need to take away</span> Fees cost money. Interest earns money over time.</p>
+                <p><span class="lesson-label">Action</span> Check your account rules and find ways to avoid fees.</p>
+              </div>
+            </article>
+
+            <article class="content-card quiz-card" data-quiz="personal-banking">
+              <div class="quiz-header">
+                <h3>Quick quiz</h3>
+                <button class="quiz-refresh" type="button">New questions</button>
+              </div>
+              <div class="quiz-questions" aria-live="polite"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="lesson-2" aria-hidden="true" role="dialog">
+        <div class="modal-panel" role="document">
+          <div class="modal-header">
+            <div>
+              <p class="meta">Lesson 2</p>
+              <h2>Employment and Taxes</h2>
+            </div>
+            <button class="modal-close" type="button" aria-label="Close lesson">Close</button>
+          </div>
+
+          <div class="content-stack lesson-section">
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Types of employment</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> Jobs can be full time or part time or self employed.</p>
+                <p><span class="lesson-label">How does it work</span> Full time often has steady hours and benefits. Part time has fewer hours. Self employed workers manage their own taxes and benefits.</p>
+                <p><span class="lesson-label">Takeaway</span> Your job type affects pay, benefits, and taxes.</p>
+                <p><span class="lesson-label">Action</span> Pick the job type that matches your interests and your lifestyle.</p>
+              </div>
+            </article>
+
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Gross pay vs net pay</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> Gross pay is what you earn. Net pay is what you take home after deductions.</p>
+                <p><span class="lesson-label">How does it work</span> Employers take money from each paycheck for state tax and federal tax and FICA.</p>
+                <p><span class="lesson-label">Takeaway</span> Budget with net pay since it is what you can spend.</p>
+                <p><span class="lesson-label">Action</span> Use an online tool to estimate take home pay.</p>
+                <p><span class="lesson-label">Vocabulary</span> FICA is a payroll tax for Social Security and Medicare.</p>
+              </div>
+            </article>
+
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Taxes and how they work</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> Taxes are required payments that fund public services.</p>
+                <p><span class="lesson-label">How does it work</span> The U.S. uses progressive tax brackets. Higher income faces higher rates.</p>
+                <p><span class="lesson-label">Example</span> Part of a $30,000 salary falls into the 12 percent bracket.</p>
+                <p><span class="lesson-label">Takeaway</span> Knowing brackets helps you plan and avoid surprises.</p>
+                <p><span class="lesson-label">Action</span> Look up tax brackets and estimate take home pay for a dream job.</p>
+                <p><span class="lesson-label">Vocabulary</span> Progressive tax means rates rise as income rises.</p>
+              </div>
+            </article>
+
+            <article class="content-card lesson-card">
+              <p class="meta">Subtopic</p>
+              <h3>Filing taxes</h3>
+              <div class="lesson-points">
+                <p><span class="lesson-label">What is it</span> A tax return compares what you owe with what was taken out.</p>
+                <p><span class="lesson-label">How does it work</span> You file by April 15 using a W-2. You get a refund if too much was withheld.</p>
+                <p><span class="lesson-label">Example</span> Joe had $1800 withheld. He owed $1400. He got a $400 refund.</p>
+                <p><span class="lesson-label">Takeaway</span> A refund is your own money coming back.</p>
+                <p><span class="lesson-label">Action</span> If you earned income, file to see if you get money back.</p>
+                <p><span class="lesson-label">Vocabulary</span> W-2 is a wage and tax statement.</p>
+              </div>
+            </article>
+
+            <article class="content-card quiz-card" data-quiz="employment-taxes">
+              <div class="quiz-header">
+                <h3>Quick quiz</h3>
+                <button class="quiz-refresh" type="button">New questions</button>
+              </div>
+              <div class="quiz-questions" aria-live="polite"></div>
+            </article>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">
       <p>(c) 2026 Ryan Cao</p>
     </footer>
+    <script src="quiz.js?v=20260404"></script>
+    <script src="modals.js?v=20260404"></script>
     <script src="transitions.js?v=20260322"></script>
   </body>
 </html>
